@@ -492,7 +492,7 @@
         .hero-visual {
             position: relative;
             z-index: 3;
-            margin-top: 3rem;
+            margin-top: 0;
             min-height: auto;
             display: flex;
             align-items: center;
@@ -502,7 +502,7 @@
         .hero-visual img {
             max-width: 100%;
             height: auto;
-            max-height: 250px;
+            max-height: 320px;
             width: 100%;
             object-fit: contain;
             filter: drop-shadow(0 30px 60px rgba(214, 168, 75, 0.15));
@@ -510,20 +510,20 @@
 
         @media (min-width: 768px) {
             .hero-visual img {
-                max-height: 400px;
+                max-height: 480px;
             }
         }
 
         @media (min-width: 1024px) {
             .hero-visual img {
-                max-height: 450px;
+                max-height: 550px;
             }
         }
 
         /* ========== TOP THREE BOOKS IMAGE ========== */
         .top-books-image {
             width: 100%;
-            padding: 1.5rem 2rem;
+            padding: 0;
             display: flex;
             justify-content: center;
             background-color: var(--bg-primary);
@@ -531,14 +531,14 @@
 
         .top-books-image img {
             width: 100%;
-            max-width: 500px;
+            max-width: 600px;
             height: auto;
             object-fit: contain;
         }
 
         @media (min-width: 768px) {
             .top-books-image img {
-                max-width: 650px;
+                max-width: 800px;
             }
         }
 
@@ -1958,9 +1958,9 @@
                 <div class="offer-contents">
                     <h4>Incluye:</h4>
                     <ul class="content-list">
-                        <li>✓ Libro de la Sabiduría — Volumen I (Descubre)</li>
-                        <li>✓ Libro de la Sabiduría — Volumen II (Comprende)</li>
-                        <li>✓ Libro de la Sabiduría — Volumen III (Cuestiona)</li>
+                        <li>✓ Volumen I — Descubre</li>
+                        <li>✓ Volumen II — Comprende</li>
+                        <li>✓ Volumen III — Cuestiona</li>
                     </ul>
                 </div>
                 <div class="offer-price">
@@ -1969,7 +1969,7 @@
                     <p style="color: var(--text-secondary); margin: 1rem 0 0 0; font-size: 0.95rem;">Ahorra US$19,98 • Colección completa de 3 volúmenes</p>
                 </div>
                 <button class="btn btn-primary" style="width: 100%; font-size: 1.1rem;" onclick="redirectToHotmart()" aria-label="Ir a la compra en Hotmart">
-                    Quiero la colección completa
+                    Quiero la colección
                 </button>
                 <div class="offer-microcopy">
                     <p>✓ Compra procesada por Hotmart</p>
@@ -2086,7 +2086,7 @@
                 <div style="color: var(--text-secondary); font-size: 1rem;">→</div>
                 <div class="price-final">US$9,99</div>
             </div>
-            <button class="btn btn-primary" style="font-size: 1.1rem; padding: 1.25rem 3rem;" onclick="redirectToHotmart()" aria-label="Acceder a la compra en Hotmart">
+            <button class="btn btn-primary" style="font-size: 1.1rem; padding: 1.25rem 3rem; margin: 0 auto;" onclick="redirectToHotmart()" aria-label="Acceder a la compra en Hotmart">
                 Acceder ahora
             </button>
         </div>
