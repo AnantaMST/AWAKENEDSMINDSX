@@ -642,21 +642,34 @@
         }
 
         .volumes-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.5rem;
+            display: flex;
+            gap: 0.75rem;
             margin-top: 3rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            padding: 1rem 0;
+            /* Hide scrollbar but keep scrollable */
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .volumes-grid::-webkit-scrollbar {
+            display: none;
         }
 
         @media (min-width: 480px) {
             .volumes-grid {
-                gap: 0.75rem;
+                gap: 1rem;
             }
         }
 
         @media (min-width: 768px) {
             .volumes-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
                 gap: 1.5rem;
+                overflow-x: visible;
             }
         }
 
@@ -667,7 +680,20 @@
         }
 
         .volumes-scroll-hint {
-            display: none;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .volumes-scroll-hint {
+                display: none;
+            }
         }
 
         .scroll-arrow {
@@ -685,7 +711,16 @@
             border-radius: 8px;
             overflow: hidden;
             transition: var(--transition);
-            width: 100%;
+            width: 44%;
+            flex: 0 0 44%;
+            scroll-snap-align: start;
+        }
+
+        @media (min-width: 768px) {
+            .volume-card {
+                width: 100%;
+                flex: none;
+            }
         }
 
         .volume-card:hover {
@@ -711,47 +746,29 @@
         }
 
         .volume-info {
-            padding: 0.6rem;
+            padding: 0.85rem;
         }
 
         .volume-roman {
             color: var(--gold-primary);
-            font-size: 0.55rem;
-            letter-spacing: 0.06em;
+            font-size: 0.65rem;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
             font-weight: 600;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.3rem;
         }
 
         .volume-info h3 {
             color: var(--text-primary);
             margin-bottom: 0.4rem;
-            font-size: 0.85rem;
+            font-size: 1.05rem;
         }
 
         .volume-info p {
             color: var(--text-secondary);
-            font-size: 0.68rem;
-            line-height: 1.35;
+            font-size: 0.78rem;
+            line-height: 1.4;
             margin: 0;
-        }
-
-        @media (min-width: 480px) {
-            .volume-info {
-                padding: 0.85rem;
-            }
-
-            .volume-roman {
-                font-size: 0.65rem;
-            }
-
-            .volume-info h3 {
-                font-size: 1rem;
-            }
-
-            .volume-info p {
-                font-size: 0.75rem;
-            }
         }
 
         @media (min-width: 768px) {
@@ -773,23 +790,17 @@
         }
 
         .volume-price {
-            margin-top: 0.5rem;
-            padding-top: 0.5rem;
+            margin-top: 0.6rem;
+            padding-top: 0.6rem;
             border-top: 1px solid rgba(214, 168, 75, 0.2);
             text-align: center;
         }
 
         .volume-price-amount {
-            font-size: 0.8rem;
+            font-size: 0.95rem;
             color: var(--gold-light);
             font-weight: 700;
             margin: 0;
-        }
-
-        @media (min-width: 480px) {
-            .volume-price-amount {
-                font-size: 0.95rem;
-            }
         }
 
         @media (min-width: 768px) {
@@ -918,21 +929,34 @@
         }
 
         .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.5rem;
+            display: flex;
+            gap: 0.75rem;
             margin-top: 2rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            padding: 1rem 0;
+            /* Hide scrollbar but keep scrollable */
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .gallery-grid::-webkit-scrollbar {
+            display: none;
         }
 
         @media (min-width: 480px) {
             .gallery-grid {
-                gap: 0.75rem;
+                gap: 1rem;
             }
         }
 
         @media (min-width: 768px) {
             .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
                 gap: 1.5rem;
+                overflow-x: visible;
             }
         }
 
@@ -943,7 +967,24 @@
         }
 
         .gallery-scroll-hint {
-            display: none;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .gallery-scroll-hint {
+                display: none;
+            }
+        }
+
+        .gallery-scroll-arrow {
+            animation: slideArrow 1.5s ease-in-out infinite;
         }
 
         .gallery-item {
@@ -954,7 +995,16 @@
             cursor: pointer;
             transition: var(--transition);
             border: 1px solid rgba(214, 168, 75, 0.2);
-            width: 100%;
+            width: 44%;
+            flex: 0 0 44%;
+            scroll-snap-align: start;
+        }
+
+        @media (min-width: 768px) {
+            .gallery-item {
+                width: 100%;
+                flex: none;
+            }
         }
 
         .gallery-item:hover {
