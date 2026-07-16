@@ -1,0 +1,2066 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Biblioteca de la Sabiduría: Tres volúmenes para explorar simbolismo, conciencia y autoconocimiento. Colección completa digital por US$15,99.">
+    <meta name="theme-color" content="#05070B">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Biblioteca de la Sabiduría | Colección Completa">
+    <meta property="og:description" content="Descubre. Comprende. Despierta. Tres volúmenes para explorar simbolismo, filosofía y conciencia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tudominio.com">
+    <meta property="og:image" content="assets/og-image.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Biblioteca de la Sabiduría | Colección Completa">
+    <meta name="twitter:description" content="Descubre. Comprende. Despierta.">
+    <meta name="twitter:image" content="assets/og-image.webp">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://tudominio.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.imgur.com/s513pZP.png">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/s513pZP.png">
+    
+    <title>Biblioteca de la Sabiduría | Descubre. Comprende. Despierta.</title>
+    
+    <style>
+        /* ========== VARIABLES Y RESET ========== */
+        :root {
+            --bg-primary: #05070B;
+            --bg-secondary: #0B1020;
+            --gold-primary: #D6A84B;
+            --gold-light: #F1D48A;
+            --blue-cosmic: #123A63;
+            --red-accent: #7A201B;
+            --text-primary: #F5F2EA;
+            --text-secondary: #B8B5AE;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Respetar preferencia de movimiento reducido */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* ========== ELEMENTOS BASE ========== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: 3.5rem; letter-spacing: -0.02em; }
+        h2 { font-size: 2.5rem; letter-spacing: -0.01em; }
+        h3 { font-size: 1.75rem; }
+        h4 { font-size: 1.5rem; }
+        h5 { font-size: 1.25rem; }
+        h6 { font-size: 1rem; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.75rem; }
+            h3 { font-size: 1.4rem; }
+            h4 { font-size: 1.25rem; }
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        a {
+            color: var(--gold-primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--gold-light);
+        }
+
+        a:focus-visible {
+            outline: 2px solid var(--gold-primary);
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
+
+        /* ========== BOTONES ========== */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.95rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            text-decoration: none;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn:focus-visible {
+            outline: 2px solid var(--gold-primary);
+            outline-offset: 2px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
+            color: var(--bg-primary);
+            border: 1px solid var(--gold-primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(214, 168, 75, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--gold-primary);
+            border: 1px solid var(--gold-primary);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(214, 168, 75, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .btn-sm {
+            padding: 0.75rem 1.5rem;
+            font-size: 0.85rem;
+            min-height: 44px;
+        }
+
+        /* ========== CONTENEDOR Y GRID ========== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 2rem;
+            }
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .col-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .col-2 {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* ========== BARRA DE ANUNCIO ========== */
+        .announcement-bar {
+            background: linear-gradient(90deg, rgba(214, 168, 75, 0.15), rgba(122, 32, 27, 0.15));
+            border-bottom: 2px solid rgba(214, 168, 75, 0.3);
+            padding: 1rem 2rem;
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--gold-light);
+            letter-spacing: 0.05em;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .announcement-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: shimmer 3s infinite;
+            z-index: 1;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .announcement-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .announcement-fire {
+            display: inline-block;
+            animation: pulse 1.5s ease-in-out infinite;
+            font-size: 1.2rem;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        .announcement-text {
+            font-weight: 600;
+            color: var(--gold-light);
+        }
+
+        .announcement-separator {
+            color: rgba(214, 168, 75, 0.5);
+        }
+
+        .announcement-countdown {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .announcement-countdown strong {
+            color: var(--red-accent);
+            font-weight: 700;
+            font-family: 'Courier New', monospace;
+        }
+
+        @media (max-width: 768px) {
+            .announcement-bar {
+                padding: 0.75rem 1rem;
+            }
+
+            .announcement-content {
+                gap: 0.5rem;
+            }
+
+            .announcement-text {
+                font-size: 0.85rem;
+            }
+
+            .announcement-countdown {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* ========== HEADER / NAVEGACIÓN ========== */
+        header {
+            background-color: rgba(5, 7, 11, 0.8);
+            border-bottom: 1px solid rgba(214, 168, 75, 0.1);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            transition: background-color 0.3s ease;
+        }
+
+        header.scrolled {
+            background-color: rgba(5, 7, 11, 0.95);
+            border-bottom: 1px solid rgba(214, 168, 75, 0.15);
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold-primary);
+            font-family: 'Cinzel', serif;
+            letter-spacing: 0.1em;
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav a {
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color var(--transition);
+        }
+
+        .nav a:hover {
+            color: var(--gold-primary);
+        }
+
+        @media (max-width: 1024px) {
+            .nav {
+                display: none;
+            }
+        }
+
+        .header-cta {
+            flex-shrink: 0;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--gold-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        @media (max-width: 1024px) {
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 4rem 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, rgba(18, 58, 99, 0.15) 0%, transparent 70%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(214, 168, 75, 0.3);
+            border-radius: 50%;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-eyebrow {
+            color: var(--gold-primary);
+            font-size: 0.95rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .hero-title {
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-cta-group {
+                flex-direction: column;
+            }
+
+            .hero-cta-group .btn {
+                width: 100%;
+            }
+        }
+
+        .hero-price {
+            color: var(--gold-light);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-trust {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .hero-visual {
+            position: relative;
+            z-index: 3;
+            margin-top: 3rem;
+            min-height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-visual img {
+            max-width: 100%;
+            height: auto;
+            max-height: 250px;
+            width: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 30px 60px rgba(214, 168, 75, 0.15));
+        }
+
+        @media (min-width: 768px) {
+            .hero-visual img {
+                max-height: 400px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-visual img {
+                max-height: 450px;
+            }
+        }
+
+        /* ========== SOCIAL PROOF ========== */
+        .social-proof {
+            background-color: var(--bg-secondary);
+            padding: 4rem 2rem;
+            border-top: 1px solid rgba(214, 168, 75, 0.1);
+            border-bottom: 1px solid rgba(214, 168, 75, 0.1);
+        }
+
+        .social-proof-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .social-proof h2 {
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .social-proof p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        .stat {
+            display: inline-block;
+            margin-top: 1.5rem;
+        }
+
+        .stat-number {
+            color: var(--gold-primary);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* ========== PROBLEMA E IDENTIFICACIÓN ========== */
+        .section {
+            padding: 5rem 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-header h2 {
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .problem-section {
+            background-color: transparent;
+        }
+
+        .problem-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .problem-point {
+            padding: 2rem;
+            background: rgba(214, 168, 75, 0.05);
+            border-left: 3px solid var(--gold-primary);
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .problem-point:hover {
+            background: rgba(214, 168, 75, 0.1);
+            transform: translateX(8px);
+        }
+
+        .problem-point p {
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* ========== JOURNEY DE 3 VOLÚMENES ========== */
+        .volumes-section {
+            background-color: var(--bg-secondary);
+            padding: 2.5rem 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .volumes-section {
+                padding: 5rem 2rem;
+            }
+        }
+
+        .volumes-grid {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 3rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            padding: 1rem 0;
+            position: relative;
+            /* Hide scrollbar but keep scrollable */
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .volumes-grid::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media (min-width: 480px) {
+            .volumes-grid {
+                gap: 1rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .volumes-grid {
+                gap: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .volumes-grid {
+                gap: 2rem;
+            }
+        }
+
+        .volumes-scroll-hint {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        @media (min-width: 769px) {
+            .volumes-scroll-hint {
+                display: none;
+            }
+        }
+
+        .scroll-arrow {
+            animation: slideArrow 1.5s ease-in-out infinite;
+        }
+
+        @keyframes slideArrow {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(5px); }
+        }
+
+        .volume-card {
+            background: linear-gradient(135deg, rgba(18, 58, 99, 0.3), rgba(122, 32, 27, 0.2));
+            border: 1px solid rgba(214, 168, 75, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: var(--transition);
+            min-width: 180px;
+            flex-shrink: 0;
+            scroll-snap-align: start;
+        }
+
+        .volume-card:hover {
+            border-color: var(--gold-primary);
+            background: linear-gradient(135deg, rgba(18, 58, 99, 0.5), rgba(122, 32, 27, 0.3));
+            transform: translateY(-10px);
+        }
+
+        @media (min-width: 480px) {
+            .volume-card {
+                min-width: 210px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .volume-card {
+                min-width: 250px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .volume-card {
+                min-width: 300px;
+            }
+        }
+
+        .volume-image {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: linear-gradient(135deg, var(--blue-cosmic), var(--red-accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            min-height: 180px;
+        }
+
+        .volume-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (min-width: 480px) {
+            .volume-image {
+                min-height: 220px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .volume-image {
+                min-height: 300px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .volume-image {
+                min-height: 380px;
+            }
+        }
+
+        .volume-info {
+            padding: 1rem;
+        }
+
+        .volume-roman {
+            color: var(--gold-primary);
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .volume-info h3 {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .volume-info p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        @media (min-width: 768px) {
+            .volume-info {
+                padding: 1.5rem;
+            }
+
+            .volume-info h3 {
+                font-size: 1.5rem;
+            }
+
+            .volume-info p {
+                font-size: 0.95rem;
+            }
+        }
+
+        .volume-price {
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid rgba(214, 168, 75, 0.2);
+            text-align: center;
+        }
+
+        .volume-price-amount {
+            font-size: 1.1rem;
+            color: var(--gold-light);
+            font-weight: 700;
+            margin: 0;
+        }
+
+        @media (min-width: 768px) {
+            .volume-price {
+                margin-top: 1.5rem;
+                padding-top: 1.5rem;
+            }
+
+            .volume-price-amount {
+                font-size: 1.5rem;
+            }
+        }
+
+        .price-strikethrough {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            text-decoration: line-through;
+            margin-top: 0.5rem;
+        }
+
+        .price-display {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .price-original {
+            color: var(--text-secondary);
+            text-decoration: line-through;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .price-final {
+            color: var(--gold-light);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .discount-badge {
+            background: var(--red-accent);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ========== WHAT IS INSIDE ========== */
+        .whats-inside {
+            background-color: transparent;
+            padding: 5rem 2rem;
+        }
+
+        .inside-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .inside-item {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .inside-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gold-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-primary);
+            font-weight: 700;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            font-family: 'Cinzel', serif;
+        }
+
+        .inside-item p {
+            margin: 0;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ========== TOPICS ========== */
+        .topics-section {
+            background-color: var(--bg-secondary);
+            padding: 5rem 2rem;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .topic-tag {
+            background: rgba(214, 168, 75, 0.1);
+            border: 1px solid rgba(214, 168, 75, 0.3);
+            padding: 1rem;
+            text-align: center;
+            border-radius: 6px;
+            color: var(--gold-light);
+            font-weight: 500;
+            transition: var(--transition);
+            cursor: default;
+        }
+
+        .topic-tag:hover {
+            background: rgba(214, 168, 75, 0.2);
+            border-color: var(--gold-primary);
+            transform: translateY(-4px);
+        }
+
+        /* ========== PREVIEW GALLERY ========== */
+        .gallery-section {
+            padding: 5rem 2rem;
+        }
+
+        .gallery-grid {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 2rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            padding: 1rem 0;
+            min-width: 0;
+            /* Hide scrollbar but keep scrollable */
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .gallery-grid::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media (min-width: 480px) {
+            .gallery-grid {
+                gap: 1rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .gallery-grid {
+                gap: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .gallery-grid {
+                gap: 2rem;
+            }
+        }
+
+        .gallery-scroll-hint {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        @media (min-width: 769px) {
+            .gallery-scroll-hint {
+                display: none;
+            }
+        }
+
+        .gallery-scroll-arrow {
+            animation: slideArrow 1.5s ease-in-out infinite;
+        }
+
+        @keyframes slideArrow {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(5px); }
+        }
+
+        .gallery-item {
+            aspect-ratio: 3/4;
+            background: linear-gradient(135deg, var(--blue-cosmic), var(--red-accent));
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid rgba(214, 168, 75, 0.2);
+            min-width: 150px;
+            flex-shrink: 0;
+            scroll-snap-align: start;
+        }
+
+        .gallery-item:hover {
+            border-color: var(--gold-primary);
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (min-width: 480px) {
+            .gallery-item {
+                min-width: 180px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .gallery-item {
+                min-width: 210px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .gallery-item {
+                min-width: 250px;
+            }
+        }
+
+        /* ========== WHO IT'S FOR ========== */
+        .for-section {
+            background-color: var(--bg-secondary);
+            padding: 5rem 2rem;
+        }
+
+        .for-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .for-item {
+            padding: 1.5rem;
+            background: rgba(214, 168, 75, 0.05);
+            border-left: 3px solid var(--gold-primary);
+            border-radius: 4px;
+        }
+
+        .for-item p {
+            margin: 0;
+            color: var(--text-secondary);
+        }
+
+        /* ========== NOT FOR EVERYONE ========== */
+        .not-for-section {
+            background: linear-gradient(135deg, rgba(122, 32, 27, 0.2), rgba(18, 58, 99, 0.2));
+            border-top: 1px solid rgba(214, 168, 75, 0.2);
+            border-bottom: 1px solid rgba(214, 168, 75, 0.2);
+            padding: 4rem 2rem;
+        }
+
+        .not-for-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .not-for-content h2 {
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .not-for-content p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        /* ========== OFFER / PRICING ========== */
+        .offer-section {
+            padding: 5rem 2rem;
+        }
+
+        .offer-card {
+            max-width: 600px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(214, 168, 75, 0.1), rgba(18, 58, 99, 0.1));
+            border: 1px solid rgba(214, 168, 75, 0.4);
+            border-radius: 8px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .offer-card:hover {
+            border-color: var(--gold-primary);
+            background: linear-gradient(135deg, rgba(214, 168, 75, 0.15), rgba(18, 58, 99, 0.15));
+        }
+
+        .offer-image {
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .offer-image img {
+            max-width: 100%;
+            height: auto;
+            max-height: 200px;
+            border-radius: 8px;
+            filter: drop-shadow(0 10px 30px rgba(214, 168, 75, 0.15));
+        }
+
+        @media (min-width: 768px) {
+            .offer-image img {
+                max-height: 280px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .offer-image img {
+                max-height: 350px;
+            }
+        }
+
+        .offer-contents {
+            margin: 2rem 0;
+        }
+
+        .offer-contents h4 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .content-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-list li {
+            color: var(--text-secondary);
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(214, 168, 75, 0.1);
+        }
+
+        .content-list li:last-child {
+            border-bottom: none;
+        }
+
+        .offer-price {
+            margin: 2rem 0;
+        }
+
+        .price-amount {
+            font-size: 2.5rem;
+            color: var(--gold-light);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .offer-microcopy {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .offer-microcopy p {
+            color: var(--text-secondary);
+            margin: 0.5rem 0;
+        }
+
+        /* ========== FAQ ========== */
+        .faq-section {
+            background-color: var(--bg-secondary);
+            padding: 5rem 2rem;
+        }
+
+        .faq-container {
+            max-width: 700px;
+            margin: 2rem auto 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(214, 168, 75, 0.2);
+            margin-bottom: 1rem;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            background: transparent;
+            border: none;
+            width: 100%;
+            text-align: left;
+            padding: 1.5rem 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .faq-question:hover {
+            color: var(--gold-primary);
+        }
+
+        .faq-question:focus-visible {
+            outline: 2px solid var(--gold-primary);
+            outline-offset: 4px;
+        }
+
+        .faq-icon {
+            display: inline-block;
+            transition: transform 0.3s ease;
+            font-size: 1.25rem;
+            color: var(--gold-primary);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 0 0 0;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 0 1.5rem 0;
+        }
+
+        /* ========== DESCARGO DE RESPONSABILIDAD ========== */
+        .disclaimer-section {
+            background-color: rgba(214, 168, 75, 0.05);
+            padding: 3rem 2rem;
+            border-top: 1px solid rgba(214, 168, 75, 0.2);
+            border-bottom: 1px solid rgba(214, 168, 75, 0.2);
+        }
+
+        .disclaimer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* ========== FINAL CTA ========== */
+        .final-cta-section {
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .final-cta-section h2 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .final-cta-section p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid rgba(214, 168, 75, 0.1);
+            padding: 3rem 2rem;
+            margin-top: 5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--gold-primary);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            transition: var(--transition);
+            display: block;
+            padding: 0.5rem 0;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold-primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(214, 168, 75, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-brand {
+            color: var(--gold-primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ========== STICKY MOBILE CTA ========== */
+        .mobile-sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(180deg, transparent, var(--bg-primary));
+            padding: 1rem;
+            z-index: 99;
+            display: none;
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(214, 168, 75, 0.2);
+        }
+
+        .mobile-sticky-cta.active {
+            display: block;
+        }
+
+        .mobile-sticky-cta .btn {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-bottom: 80px;
+            }
+        }
+
+        /* ========== UTILITIES ========== */
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-1 { margin-bottom: 1rem; }
+        .mb-2 { margin-bottom: 2rem; }
+        .mb-3 { margin-bottom: 3rem; }
+
+        .mt-1 { margin-top: 1rem; }
+        .mt-2 { margin-top: 2rem; }
+        .mt-3 { margin-top: 3rem; }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA DE ANUNCIO -->
+    <div class="announcement-bar" role="banner" id="announcementBar">
+        <div class="announcement-content">
+            <span class="announcement-fire">🔥</span>
+            <span class="announcement-text">Obtén los 3 libros por un único precio especial</span>
+            <span class="announcement-separator">•</span>
+            <span class="announcement-countdown" id="countdownTimer">Oferta válida por: <strong id="timeLeft">--:--:--</strong></span>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVEGACIÓN -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Awakened Minds</div>
+                <nav class="nav" role="navigation">
+                    <li><a href="#volumes">Colección</a></li>
+                    <li><a href="#whats-inside">Contenido</a></li>
+                    <li><a href="#topics">Temas</a></li>
+                    <li><a href="#faq">Preguntas</a></li>
+                </nav>
+                <button class="menu-toggle" aria-label="Menú" aria-expanded="false">☰</button>
+                <div class="header-cta">
+                    <a href="#offer" class="btn btn-primary btn-sm">Obtener ahora</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-particles" id="particlesContainer"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Biblioteca de la Sabiduría</p>
+            <h1 class="hero-title">Tres volúmenes para mirar la conciencia desde una nueva perspectiva</h1>
+            <p class="hero-subtitle">Explora simbolismo, filosofía, tradiciones espirituales, autoconocimiento y matrix mental en una colección digital diseñada para estudiar, relacionar ideas y ampliar tu percepción.</p>
+            <div class="hero-cta-group">
+                <a href="#offer" class="btn btn-primary">Obtener los 3 volúmenes</a>
+                <a href="#volumes" class="btn btn-secondary">Explorar la colección</a>
+            </div>
+            <div class="price-display" style="margin-top: 2rem; margin-bottom: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <div class="price-original">US$35,97</div>
+                <div style="color: var(--text-secondary); font-size: 1rem;">→</div>
+                <div class="price-final">US$15,99</div>
+            </div>
+            <p class="hero-trust">✓ Colección completa • 3 volúmenes • 1 precio especial</p>
+            <div class="hero-visual">
+                <img src="https://i.imgur.com/0XlcI4a.png" alt="Mockup de los tres volúmenes de la Biblioteca de la Sabiduría" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22%3E%3Crect fill=%22%230B1020%22 width=%22600%22 height=%22400%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23D6A84B%22 font-size=%2224%22 font-family=%22Arial%22%3E[Imagen Hero - 3 Libros]%3C/text%3E%3C/svg%3E'">
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="social-proof-content">
+                <h2>Una comunidad interesada en conciencia, energía y realidad</h2>
+                <p>Awakened Minds reúne una comunidad de más de 320.000 seguidores en Instagram interesados en simbolismo, espiritualidad y autoconocimiento.</p>
+                <div class="stat">
+                    <div class="stat-number">320K+</div>
+                    <div class="stat-label">Comunidad en Instagram @_awakened_minds_x</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEMA E IDENTIFICACIÓN -->
+    <section class="problem-section section">
+        <div class="container">
+            <div class="section-header">
+                <h2>El conocimiento está disperso. La colección te ayuda a relacionarlo.</h2>
+            </div>
+            <div class="problem-points">
+                <div class="problem-point">
+                    <p>Muchos conceptos aparecen separados entre libros, tradiciones y escuelas de pensamiento.</p>
+                </div>
+                <div class="problem-point">
+                    <p>La colección reúne interpretaciones visuales y explicaciones sobre simbolismo, conciencia y desarrollo personal.</p>
+                </div>
+                <div class="problem-point">
+                    <p>Puedes recorrerla como una biblioteca y profundizar en los temas que despierten tu curiosidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JOURNEY DE 3 VOLÚMENES -->
+    <section class="volumes-section" id="volumes">
+        <div class="container">
+            <div class="section-header">
+                <h2>Descubre, comprende y cuestiona</h2>
+            </div>
+            <div class="volumes-grid">
+                <!-- Volumen I -->
+                <div class="volume-card">
+                    <div class="volume-image">
+                        <img src="https://i.imgur.com/vUobIkT.png" alt="Portada del Volumen I — Descubre" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22400%22%3E%3Crect fill=%22%23123A63%22 width=%22300%22 height=%22400%22/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23D6A84B%22 font-size=%2720%27 font-family=%22Arial%22 font-weight=%22bold%22%3EVol I%3C/text%3E%3C/svg%3E'">
+                    </div>
+                    <div class="volume-info">
+                        <div class="volume-roman">Volumen I</div>
+                        <h3>Descubre</h3>
+                        <p>Exploración altamente visual de símbolos, geometría sagrada, chakras, kundalini, glándula pineal, planos astrales y conexiones entre distintas tradiciones espirituales y filosóficas.</p>
+                        <div class="volume-price">
+                            <p class="volume-price-amount">US$11,99</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Volumen II -->
+                <div class="volume-card">
+                    <div class="volume-image">
+                        <img src="https://i.imgur.com/TL6why3.png" alt="Portada del Volumen II — Comprende" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22400%22%3E%3Crect fill=%22%23123A63%22 width=%22300%22 height=%22400%22/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23D6A84B%22 font-size=%2720%27 font-family=%22Arial%22 font-weight=%22bold%22%3EVol II%3C/text%3E%3C/svg%3E'">
+                    </div>
+                    <div class="volume-info">
+                        <div class="volume-roman">Volumen II</div>
+                        <h3>Comprende</h3>
+                        <p>Profundización en temas como el Árbol de la Vida, cábala, numerología, mente, cuerpo, sentidos y diferentes sistemas simbólicos. Diseñado para relacionar conceptos y crear un marco de comprensión.</p>
+                        <div class="volume-price">
+                            <p class="volume-price-amount">US$11,99</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Volumen III -->
+                <div class="volume-card">
+                    <div class="volume-image">
+                        <img src="https://i.imgur.com/3HPlZ5t.png" alt="Portada del Volumen III — Cuestiona" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22400%22%3E%3Crect fill=%22%237A201B%22 width=%22300%22 height=%22400%22/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23D6A84B%22 font-size=%2720%27 font-family=%22Arial%22 font-weight=%22bold%22%3EVol III%3C/text%3E%3C/svg%3E'">
+                    </div>
+                    <div class="volume-info">
+                        <div class="volume-roman">Volumen III</div>
+                        <h3>Cuestiona</h3>
+                        <p>Enfoque en matrix mental, condicionamientos, rutina automática y autonomía personal. Invita a examinar cómo funciona tu mente, tus decisiones y los patrones que gobiernan tu vida cotidiana.</p>
+                        <div class="volume-price">
+                            <p class="volume-price-amount">US$11,99</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="volumes-scroll-hint">
+                <span class="scroll-arrow">→ Desliza para ver más →</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT IS INSIDE -->
+    <section class="whats-inside section" id="whats-inside">
+        <div class="container">
+            <div class="section-header">
+                <h2>Una biblioteca para explorar a tu propio ritmo</h2>
+            </div>
+            <div class="inside-grid">
+                <div class="inside-item">
+                    <div class="inside-icon">📚</div>
+                    <p><strong>Tres libros digitales completos.</strong> Acceso total a los tres volúmenes en formato PDF optimizado.</p>
+                </div>
+                <div class="inside-item">
+                    <div class="inside-icon">🎨</div>
+                    <p><strong>Contenido visual acompañado de diagramas.</strong> Ilustraciones y esquemas diseñados para facilitar la comprensión.</p>
+                </div>
+                <div class="inside-item">
+                    <div class="inside-icon">🔍</div>
+                    <p><strong>Temas de simbolismo, filosofía y espiritualidad.</strong> Exploración profunda de tradiciones, energía y conciencia.</p>
+                </div>
+                <div class="inside-item">
+                    <div class="inside-icon">📱</div>
+                    <p><strong>Lectura desde múltiples dispositivos.</strong> Accesible en celular, tableta o computadora.</p>
+                </div>
+                <div class="inside-item">
+                    <div class="inside-icon">⚡</div>
+                    <p><strong>Acceso inmediato después del pago.</strong> Confirmación de compra y descarga en minutos.</p>
+                </div>
+                <div class="inside-item">
+                    <div class="inside-icon">∞</div>
+                    <p><strong>Referencia para vida.</strong> Consulta los libros cuantas veces necesites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOPICS -->
+    <section class="topics-section" id="topics">
+        <div class="container">
+            <div class="section-header">
+                <h2>Temas que encontrarás en la colección</h2>
+            </div>
+            <div class="topics-grid">
+                <div class="topic-tag">Simbolismo</div>
+                <div class="topic-tag">Conciencia</div>
+                <div class="topic-tag">Geometría Sagrada</div>
+                <div class="topic-tag">Glándula Pineal</div>
+                <div class="topic-tag">Chakras</div>
+                <div class="topic-tag">Kundalini</div>
+                <div class="topic-tag">Árbol de la Vida</div>
+                <div class="topic-tag">Cábala</div>
+                <div class="topic-tag">Numerología</div>
+                <div class="topic-tag">Filosofía</div>
+                <div class="topic-tag">Autoconocimiento</div>
+                <div class="topic-tag">Matrix Mental</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREVIEW GALLERY -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mira el interior de la colección</h2>
+                <p>Galería de muestras de las páginas interiores de cada volumen.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://i.imgur.com/z4D6k8H.png" alt="Página interior Volumen 1" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22380%22%3E%3Crect fill=%22%230B1020%22 width=%22280%22 height=%22380%22/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23D6A84B%22 font-size=%2716%27 font-family=%22Arial%22%3EPreview Vol I%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.imgur.com/ZkAvZOu.png" alt="Página interior Volumen 2" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22380%22%3E%3Crect fill=%220B1020%22 width=%22280%22 height=%22380%22/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23D6A84B%22 font-size=%2716%27 font-family=%22Arial%22%3EPreview Vol II%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.imgur.com/bLpoC2N.png" alt="Página interior Volumen 3" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22380%22%3E%3Crect fill=%220B1020%22 width=%22280%22 height=%22380%22/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 text-anchor=%22middle%22 dy=%22.3em%22 fill=%23%22D6A84B%22 font-size=%2716%27 font-family=%22Arial%22%3EPreview Vol III%3C/text%3E%3C/svg%3E'">
+                </div>
+            </div>
+            <div class="gallery-scroll-hint">
+                <span class="gallery-scroll-arrow">→ Desliza para ver más →</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO IT'S FOR -->
+    <section class="for-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Esta colección puede ser para ti si…</h2>
+            </div>
+            <div class="for-list">
+                <div class="for-item">
+                    <p><strong>Disfrutas estudiar símbolos</strong> y sus diferentes interpretaciones en distintas culturas y tradiciones.</p>
+                </div>
+                <div class="for-item">
+                    <p><strong>Te interesan las tradiciones antiguas</strong> y los sistemas filosóficos que han perdurado a través del tiempo.</p>
+                </div>
+                <div class="for-item">
+                    <p><strong>Buscas nuevas perspectivas</strong> sobre la conciencia, la mente y la realidad.</p>
+                </div>
+                <div class="for-item">
+                    <p><strong>Prefieres materiales visuales</strong> que relacionen conceptos de forma clara y accesible.</p>
+                </div>
+                <div class="for-item">
+                    <p><strong>Quieres una colección de referencia</strong> que puedas consultar varias veces a través del tiempo.</p>
+                </div>
+                <div class="for-item">
+                    <p><strong>Disfrutas el aprendizaje independiente</strong> a tu ritmo, sin estructura rígida ni cronograma.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOT FOR EVERYONE -->
+    <section class="not-for-section">
+        <div class="container">
+            <div class="not-for-content">
+                <h2>Una obra para explorar, no para aceptar sin cuestionar</h2>
+                <p>Los libros presentan perspectivas filosóficas, espirituales y simbólicas. El lector está invitado a analizarlas, contrastarlas y construir sus propias conclusiones. No se trata de dogmas, sino de herramientas para ampliar tu pensamiento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFER -->
+    <section class="offer-section" id="offer">
+        <div class="container">
+            <div class="offer-card">
+                <div class="offer-image">
+                    <img src="https://i.imgur.com/jvsaGKC.png" alt="Los tres volúmenes de la Biblioteca de la Sabiduría" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%220B1020%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23D6A84B%22 font-size=%2724%27 font-family=%22Arial%22 font-weight=%22bold%22%3E[Los 3 Volúmenes]%3C/text%3E%3C/svg%3E'">
+                </div>
+                <h2>Accede a la colección completa</h2>
+                <div class="offer-contents">
+                    <h4>Incluye:</h4>
+                    <ul class="content-list">
+                        <li>✓ Libro de la Sabiduría — Volumen I (Descubre)</li>
+                        <li>✓ Libro de la Sabiduría — Volumen II (Comprende)</li>
+                        <li>✓ Libro de la Sabiduría — Volumen III (Cuestiona)</li>
+                    </ul>
+                </div>
+                <div class="offer-price">
+                    <div class="price-original">US$35,97</div>
+                    <div class="price-final">US$15,99</div>
+                    <p style="color: var(--text-secondary); margin: 1rem 0 0 0; font-size: 0.95rem;">Ahorra US$19,98 • Colección completa de 3 volúmenes</p>
+                </div>
+                <button class="btn btn-primary" style="width: 100%; font-size: 1.1rem;" onclick="redirectToHotmart()" aria-label="Ir a la compra en Hotmart">
+                    Quiero la colección completa
+                </button>
+                <div class="offer-microcopy">
+                    <p>✓ Compra procesada por Hotmart</p>
+                    <p>✓ Acceso digital después de la aprobación del pago</p>
+                    <p>✓ Lee desde tu celular, tableta o computadora</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section class="disclaimer-section">
+        <div class="container">
+            <div class="disclaimer-content">
+                <strong>Descargo de responsabilidad:</strong> El contenido de esta colección está destinado al estudio, la reflexión y la exploración de perspectivas filosóficas, espirituales y simbólicas. No constituye asesoramiento médico, psicológico, científico, financiero, legal ni religioso. Las interpretaciones presentadas deben analizarse de forma crítica y no sustituyen la consulta con profesionales cualificados.
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Preguntas frecuentes</h2>
+            </div>
+            <div class="faq-container">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        ¿Qué recibiré con mi compra?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Recibirás acceso a los tres volúmenes digitales de la Biblioteca de la Sabiduría en formato PDF. Los archivos se entregarán a través de Hotmart después de que confirmes el pago.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        ¿Los libros son físicos?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. Es una colección digital, por lo que no se enviará un producto físico. Recibirás archivos PDF que puedes descargar e imprimir si lo deseas.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        ¿En qué dispositivos puedo leerlos?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Puedes leerlos desde un celular, una tableta o una computadora compatible con archivos PDF. Puedes usar cualquier aplicación de lectura de PDFs (Adobe Acrobat, Apple Books, Google Play Books, etc.).</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        ¿Cómo recibo el acceso?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Después de que Hotmart confirme el pago, recibirás un correo electrónico con las instrucciones de acceso a los libros. Este correo llegará a la dirección de correo que proporcionaste durante la compra.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        ¿Necesito leerlos en un orden específico?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Recomendamos comenzar por el Volumen I para seguir la progresión de la colección. Sin embargo, muchos temas también pueden consultarse de manera independiente, así que puedes explorar en el orden que prefieras según tus intereses.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        ¿El contenido sustituye asesoría médica o psicológica?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. Los libros son materiales de estudio, exploración filosófica y reflexión personal. No sustituyen atención médica, psicológica, científica, legal ni profesional. Siempre consulta a profesionales cualificados para asuntos relacionados con tu salud o bienestar.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        ¿Quién procesa el pago?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>El pago y la entrega digital se procesan mediante la plataforma Hotmart, una plataforma de confianza especializada en productos digitales. Tu compra está protegida y es segura.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta-section">
+        <div class="container">
+            <h2>La colección completa está a un paso</h2>
+            <p>Explora los tres volúmenes y construye tu propia ruta de estudio. Acceso inmediato después de la confirmación del pago.</p>
+            <div class="price-display" style="justify-content: center; margin-bottom: 2rem;">
+                <div class="price-original">US$35,97</div>
+                <div style="color: var(--text-secondary); font-size: 1rem;">→</div>
+                <div class="price-final">US$15,99</div>
+            </div>
+            <button class="btn btn-primary" style="font-size: 1.1rem; padding: 1.25rem 3rem;" onclick="redirectToHotmart()" aria-label="Acceder a la compra en Hotmart">
+                Acceder ahora
+            </button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">Awakened Minds</div>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0;">Exploración de simbolismo, conciencia y sabiduría antiguo a través de contenido digital de calidad.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Comunidad</h4>
+                    <ul>
+                        <li><a href="https://instagram.com/_awakened_minds_x" target="_blank" rel="noopener noreferrer">Instagram @_awakened_minds_x</a></li>
+                        <li><a href="mailto:contacto@awakened.com">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#disclaimer">Descargo de responsabilidad</a></li>
+                        <li><a href="#privacy">Política de privacidad</a></li>
+                        <li><a href="#terms">Términos de uso</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Pago</h4>
+                    <ul>
+                        <li>Procesado por Hotmart</li>
+                        <li>Producto digital</li>
+                        <li>Acceso inmediato</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Awakened Minds. Todos los derechos reservados.</p>
+                <p>El pago y la entrega se procesan a través de Hotmart.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY MOBILE CTA -->
+    <div class="mobile-sticky-cta" id="mobileStickyCtA">
+        <div class="container">
+            <button class="btn btn-primary" style="width: 100%;" onclick="redirectToHotmart()">
+                OBTENER LOS 3 LIBROS · US$15,99
+            </button>
+        </div>
+    </div>
+
+    <!-- HOTMART CHECKOUT WIDGET -->
+    <script type="text/javascript">
+        // Integración segura de Hotmart - Se carga una sola vez
+        let hotmartLoaded = false;
+        
+        function importHotmart() {
+            if (hotmartLoaded) return;
+            hotmartLoaded = true;
+            
+            // Crear script de Hotmart
+            const hotmartScript = document.createElement('script');
+            hotmartScript.type = 'text/javascript';
+            hotmartScript.src = 'https://static.hotmart.com/checkout/widget.min.js';
+            hotmartScript.async = true;
+            document.head.appendChild(hotmartScript);
+
+            // Crear link de CSS de Hotmart
+            const hotmartLink = document.createElement('link');
+            hotmartLink.rel = 'stylesheet';
+            hotmartLink.type = 'text/css';
+            hotmartLink.href = 'https://static.hotmart.com/css/hotmart-fb.min.css';
+            document.head.appendChild(hotmartLink);
+        }
+
+        // Redirigir a Hotmart
+        function redirectToHotmart() {
+            // URL de Hotmart con el ID de tu producto
+            const hotmartUrl = 'https://pay.hotmart.com/L106763684M?checkoutMode=2';
+            
+            // Registrar evento de conversión (para Google Analytics)
+            if (window.gtag) {
+                gtag('event', 'begin_checkout', {
+                    'value': 15.99,
+                    'currency': 'USD'
+                });
+            }
+
+            // Abrir checkout
+            window.open(hotmartUrl, '_blank', 'noopener,noreferrer');
+        }
+
+        // Cargar Hotmart cuando necesario
+        document.addEventListener('DOMContentLoaded', importHotmart);
+    </script>
+
+    <!-- MAIN JAVASCRIPT -->
+    <script>
+        // Crear partículas flotantes sutiles en el hero
+        function createParticles() {
+            const container = document.getElementById('particlesContainer');
+            if (!container) return;
+
+            const particleCount = 30;
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 20) + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        // Header sticky con fondo
+        function handleHeaderScroll() {
+            const header = document.getElementById('header');
+            const hero = document.getElementById('hero');
+            
+            if (!header || !hero) return;
+
+            const heroHeight = hero.offsetHeight;
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > heroHeight * 0.5) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        }
+
+        // Mostrar/ocultar sticky CTA móvil
+        function handleMobileStickyCtA() {
+            const offerSection = document.getElementById('offer');
+            const stickyCta = document.getElementById('mobileStickyCtA');
+            
+            if (!offerSection || !stickyCta) return;
+
+            window.addEventListener('scroll', () => {
+                const rect = offerSection.getBoundingClientRect();
+                if (rect.top > window.innerHeight) {
+                    stickyCta.classList.add('active');
+                } else {
+                    stickyCta.classList.remove('active');
+                }
+            });
+        }
+
+        // Toggle FAQ Items
+        function toggleFaq(button) {
+            const item = button.closest('.faq-item');
+            if (!item) return;
+
+            const isActive = item.classList.contains('active');
+            
+            // Cerrar todos los otros items
+            document.querySelectorAll('.faq-item.active').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+
+            // Toggle el item actual
+            item.classList.toggle('active');
+        }
+
+        // Navegación suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#' || href === '#0') return;
+
+                const target = document.querySelector(href);
+                if (!target) return;
+
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // Countdown Timer
+        function startCountdownTimer() {
+            const timeLeftElement = document.getElementById('timeLeft');
+            if (!timeLeftElement) return;
+
+            // Establecer tiempo final (24 horas desde ahora)
+            const endTime = new Date(Date.now() + 24 * 60 * 60 * 1000);
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = endTime - now;
+
+                if (distance <= 0) {
+                    timeLeftElement.textContent = '00:00:00';
+                    return;
+                }
+
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                timeLeftElement.textContent = 
+                    (hours < 10 ? '0' : '') + hours + ':' +
+                    (minutes < 10 ? '0' : '') + minutes + ':' +
+                    (seconds < 10 ? '0' : '') + seconds;
+            }
+
+            // Actualizar cada segundo
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        }
+
+        // Inicializar todo cuando el DOM está listo
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            handleHeaderScroll();
+            handleMobileStickyCtA();
+            startCountdownTimer();
+
+            // Registrar Google Analytics 4 (comentario para implementación)
+            // <!-- REEMPLAZAR CON TU GA4 TRACKING ID -->
+            // window.dataLayer = window.dataLayer || [];
+            // function gtag(){dataLayer.push(arguments);}
+            // gtag('js', new Date());
+            // gtag('config', 'G-XXXXXXXXXX');
+        });
+
+        // Accesibilidad: cerrar FAQ con Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.faq-item.active').forEach(item => {
+                    item.classList.remove('active');
+                });
+            }
+        });
+
+        // Menu toggle para móvil (comentado - se puede expandir)
+        // const menuToggle = document.querySelector('.menu-toggle');
+        // if (menuToggle) {
+        //     menuToggle.addEventListener('click', () => {
+        //         // Implementar menú móvil si es necesario
+        //     });
+        // }
+    </script>
+
+    <!-- COMENTARIOS PARA INTEGRACIÓN DE ANALYTICS -->
+    <!-- 
+    GOOGLE ANALYTICS 4:
+    Reemplaza G-XXXXXXXXXX con tu ID de GA4
+    
+    META PIXEL (Facebook):
+    Reemplaza 1234567890 con tu Pixel ID
+    
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1234567890&ev=PageView&noscript=1"
+    />
+    -->
+
+</body>
+</html>
