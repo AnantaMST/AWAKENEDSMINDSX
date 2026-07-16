@@ -711,8 +711,8 @@
             border-radius: 8px;
             overflow: hidden;
             transition: var(--transition);
-            width: 44%;
-            flex: 0 0 44%;
+            width: 85%;
+            flex: 0 0 85%;
             scroll-snap-align: start;
         }
 
@@ -746,13 +746,13 @@
         }
 
         .volume-info {
-            padding: 0.85rem;
+            padding: 1.25rem;
         }
 
         .volume-roman {
             color: var(--gold-primary);
-            font-size: 0.65rem;
-            letter-spacing: 0.08em;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
             font-weight: 600;
             margin-bottom: 0.3rem;
@@ -760,14 +760,14 @@
 
         .volume-info h3 {
             color: var(--text-primary);
-            margin-bottom: 0.4rem;
-            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
         }
 
         .volume-info p {
             color: var(--text-secondary);
-            font-size: 0.78rem;
-            line-height: 1.4;
+            font-size: 0.9rem;
+            line-height: 1.5;
             margin: 0;
         }
 
@@ -790,14 +790,14 @@
         }
 
         .volume-price {
-            margin-top: 0.6rem;
-            padding-top: 0.6rem;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
             border-top: 1px solid rgba(214, 168, 75, 0.2);
             text-align: center;
         }
 
         .volume-price-amount {
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             color: var(--gold-light);
             font-weight: 700;
             margin: 0;
@@ -995,8 +995,8 @@
             cursor: pointer;
             transition: var(--transition);
             border: 1px solid rgba(214, 168, 75, 0.2);
-            width: 44%;
-            flex: 0 0 44%;
+            width: 85%;
+            flex: 0 0 85%;
             scroll-snap-align: start;
         }
 
@@ -2036,6 +2036,39 @@
         //         // Implementar menú móvil si es necesario
         //     });
         // }
+
+        // Gesto de "desliza" automático en los carruseles (solo móvil)
+        (function() {
+            function nudgeCarousel(el) {
+                if (!el || window.innerWidth >= 768) return;
+                const nudgeDistance = Math.round(el.clientWidth * 0.18);
+                let step = 0;
+                const sequence = [nudgeDistance, 0, nudgeDistance, 0];
+                function playStep() {
+                    if (step >= sequence.length) return;
+                    el.scrollTo({ left: sequence[step], behavior: 'smooth' });
+                    step++;
+                    setTimeout(playStep, 500);
+                }
+                playStep();
+            }
+
+            const carousels = [
+                document.querySelector('.volumes-grid'),
+                document.querySelector('.gallery-grid')
+            ].filter(Boolean);
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        nudgeCarousel(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            carousels.forEach(el => observer.observe(el));
+        })();
     </script>
 
     <!-- COMENTARIOS PARA INTEGRACIÓN DE ANALYTICS -->
