@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Biblioteca de la Sabiduría: Tres volúmenes para explorar simbolismo, conciencia y autoconocimiento. Colección completa digital por US$15,99.">
+    <meta name="description" content="Biblioteca de la Sabiduría: Tres volúmenes para explorar simbolismo, conciencia y autoconocimiento. Colección completa digital por US$9,99.">
     <meta name="theme-color" content="#05070B">
     
     <!-- Open Graph -->
@@ -582,6 +582,24 @@
             font-size: 0.95rem;
         }
 
+        .stat-label-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 0.5rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(214, 168, 75, 0.4);
+            border-radius: 999px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .stat-label-link:hover {
+            border-color: var(--gold-primary);
+            background: rgba(214, 168, 75, 0.1);
+            color: var(--gold-light);
+        }
+
         /* ========== PROBLEMA E IDENTIFICACIÓN ========== */
         .section {
             padding: 5rem 2rem;
@@ -605,10 +623,56 @@
         }
 
         .problem-points {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            display: flex;
+            gap: 0.75rem;
             margin-top: 2rem;
+            margin-left: -3rem;
+            margin-right: -3rem;
+            padding: 1rem 1rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .problem-points::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media (min-width: 480px) {
+            .problem-points {
+                gap: 1rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .problem-points {
+                margin-left: 0;
+                margin-right: 0;
+                padding: 1rem 0;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+                overflow-x: visible;
+            }
+        }
+
+        .problem-scroll-hint {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .problem-scroll-hint {
+                display: none;
+            }
         }
 
         .problem-point {
@@ -617,6 +681,16 @@
             border-left: 3px solid var(--gold-primary);
             border-radius: 4px;
             transition: var(--transition);
+            width: 85%;
+            flex: 0 0 85%;
+            scroll-snap-align: start;
+        }
+
+        @media (min-width: 768px) {
+            .problem-point {
+                width: 100%;
+                flex: none;
+            }
         }
 
         .problem-point:hover {
@@ -865,10 +939,72 @@
         }
 
         .inside-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            display: flex;
+            gap: 0.75rem;
             margin-top: 2rem;
+            margin-left: -3rem;
+            margin-right: -3rem;
+            padding: 1rem 1rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .inside-grid::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media (min-width: 480px) {
+            .inside-grid {
+                gap: 1rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .inside-grid {
+                margin-left: 0;
+                margin-right: 0;
+                padding: 1rem 0;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+                overflow-x: visible;
+            }
+        }
+
+        .inside-scroll-hint {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .inside-scroll-hint {
+                display: none;
+            }
+        }
+
+        .inside-col {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+            width: 85%;
+            flex: 0 0 85%;
+            scroll-snap-align: start;
+        }
+
+        @media (min-width: 768px) {
+            .inside-col {
+                width: 100%;
+                flex: none;
+            }
         }
 
         .inside-item {
@@ -904,10 +1040,72 @@
         }
 
         .topics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
+            display: flex;
+            gap: 0.75rem;
             margin-top: 2rem;
+            margin-left: -3rem;
+            margin-right: -3rem;
+            padding: 1rem 1rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .topics-grid::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media (min-width: 480px) {
+            .topics-grid {
+                gap: 1rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .topics-grid {
+                margin-left: 0;
+                margin-right: 0;
+                padding: 1rem 0;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+                overflow-x: visible;
+            }
+        }
+
+        .topics-scroll-hint {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .topics-scroll-hint {
+                display: none;
+            }
+        }
+
+        .topic-col {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            width: 85%;
+            flex: 0 0 85%;
+            scroll-snap-align: start;
+        }
+
+        @media (min-width: 768px) {
+            .topic-col {
+                width: 100%;
+                flex: none;
+            }
         }
 
         .topic-tag {
@@ -1035,13 +1233,75 @@
         }
 
         .for-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+            display: flex;
+            gap: 0.75rem;
             margin-top: 2rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-left: -3rem;
+            margin-right: -3rem;
+            padding: 1rem 1rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .for-list::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media (min-width: 480px) {
+            .for-list {
+                gap: 1rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .for-list {
+                margin-left: 0;
+                margin-right: 0;
+                padding: 1rem 0;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+                overflow-x: visible;
+                max-width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .for-scroll-hint {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .for-scroll-hint {
+                display: none;
+            }
+        }
+
+        .for-col {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 85%;
+            flex: 0 0 85%;
+            scroll-snap-align: start;
+        }
+
+        @media (min-width: 768px) {
+            .for-col {
+                width: 100%;
+                flex: none;
+            }
         }
 
         .for-item {
@@ -1435,7 +1695,7 @@
             <div class="price-display" style="margin-top: 2rem; margin-bottom: 1.5rem; justify-content: center; flex-wrap: wrap;">
                 <div class="price-original">US$35,97</div>
                 <div style="color: var(--text-secondary); font-size: 1rem;">→</div>
-                <div class="price-final">US$15,99</div>
+                <div class="price-final">US$9,99</div>
             </div>
             <p class="hero-trust">✓ Colección completa • 3 volúmenes • 1 precio especial</p>
             <div class="hero-visual">
@@ -1452,7 +1712,7 @@
                 <p>Awakened Minds reúne una comunidad de más de 320.000 seguidores en Instagram interesados en simbolismo, espiritualidad y autoconocimiento.</p>
                 <div class="stat">
                     <div class="stat-number">320K+</div>
-                    <div class="stat-label">Comunidad en Instagram @_awakened_minds_x</div>
+                    <a class="stat-label stat-label-link" href="https://instagram.com/awakened_minds_x" target="_blank" rel="noopener noreferrer">Comunidad en Instagram @Awakened_Minds_X</a>
                 </div>
             </div>
         </div>
@@ -1474,6 +1734,9 @@
                 <div class="problem-point">
                     <p>Puedes recorrerla como una biblioteca y profundizar en los temas que despierten tu curiosidad.</p>
                 </div>
+            </div>
+            <div class="problem-scroll-hint">
+                <span class="scroll-arrow">→ Desliza para ver más →</span>
             </div>
         </div>
     </section>
@@ -1543,30 +1806,39 @@
                 <h2>Una biblioteca para explorar a tu propio ritmo</h2>
             </div>
             <div class="inside-grid">
-                <div class="inside-item">
-                    <div class="inside-icon">📚</div>
-                    <p><strong>Tres libros digitales completos.</strong> Acceso total a los tres volúmenes en formato PDF optimizado.</p>
+                <div class="inside-col">
+                    <div class="inside-item">
+                        <div class="inside-icon">📚</div>
+                        <p><strong>Tres libros completos.</strong> Acceso total a los tres volúmenes en formato PDF optimizado.</p>
+                    </div>
+                    <div class="inside-item">
+                        <div class="inside-icon">🎨</div>
+                        <p><strong>Contenido visual acompañado de diagramas.</strong> Ilustraciones y esquemas diseñados para facilitar la comprensión.</p>
+                    </div>
                 </div>
-                <div class="inside-item">
-                    <div class="inside-icon">🎨</div>
-                    <p><strong>Contenido visual acompañado de diagramas.</strong> Ilustraciones y esquemas diseñados para facilitar la comprensión.</p>
+                <div class="inside-col">
+                    <div class="inside-item">
+                        <div class="inside-icon">🔍</div>
+                        <p><strong>Temas de simbolismo, filosofía y espiritualidad.</strong> Exploración profunda de tradiciones, energía y conciencia.</p>
+                    </div>
+                    <div class="inside-item">
+                        <div class="inside-icon">📱</div>
+                        <p><strong>Lectura desde múltiples dispositivos.</strong> Accesible en celular, tableta o computadora.</p>
+                    </div>
                 </div>
-                <div class="inside-item">
-                    <div class="inside-icon">🔍</div>
-                    <p><strong>Temas de simbolismo, filosofía y espiritualidad.</strong> Exploración profunda de tradiciones, energía y conciencia.</p>
+                <div class="inside-col">
+                    <div class="inside-item">
+                        <div class="inside-icon">⚡</div>
+                        <p><strong>Acceso inmediato después del pago.</strong> Confirmación de compra y descarga en minutos.</p>
+                    </div>
+                    <div class="inside-item">
+                        <div class="inside-icon">∞</div>
+                        <p><strong>Referencia para vida.</strong> Consulta los libros cuantas veces necesites.</p>
+                    </div>
                 </div>
-                <div class="inside-item">
-                    <div class="inside-icon">📱</div>
-                    <p><strong>Lectura desde múltiples dispositivos.</strong> Accesible en celular, tableta o computadora.</p>
-                </div>
-                <div class="inside-item">
-                    <div class="inside-icon">⚡</div>
-                    <p><strong>Acceso inmediato después del pago.</strong> Confirmación de compra y descarga en minutos.</p>
-                </div>
-                <div class="inside-item">
-                    <div class="inside-icon">∞</div>
-                    <p><strong>Referencia para vida.</strong> Consulta los libros cuantas veces necesites.</p>
-                </div>
+            </div>
+            <div class="inside-scroll-hint">
+                <span class="scroll-arrow">→ Desliza para ver más →</span>
             </div>
         </div>
     </section>
@@ -1578,18 +1850,27 @@
                 <h2>Temas que encontrarás en la colección</h2>
             </div>
             <div class="topics-grid">
-                <div class="topic-tag">Simbolismo</div>
-                <div class="topic-tag">Conciencia</div>
-                <div class="topic-tag">Geometría Sagrada</div>
-                <div class="topic-tag">Glándula Pineal</div>
-                <div class="topic-tag">Chakras</div>
-                <div class="topic-tag">Kundalini</div>
-                <div class="topic-tag">Árbol de la Vida</div>
-                <div class="topic-tag">Cábala</div>
-                <div class="topic-tag">Numerología</div>
-                <div class="topic-tag">Filosofía</div>
-                <div class="topic-tag">Autoconocimiento</div>
-                <div class="topic-tag">Matrix Mental</div>
+                <div class="topic-col">
+                    <div class="topic-tag">Simbolismo</div>
+                    <div class="topic-tag">Conciencia</div>
+                    <div class="topic-tag">Geometría Sagrada</div>
+                    <div class="topic-tag">Glándula Pineal</div>
+                </div>
+                <div class="topic-col">
+                    <div class="topic-tag">Chakras</div>
+                    <div class="topic-tag">Kundalini</div>
+                    <div class="topic-tag">Árbol de la Vida</div>
+                    <div class="topic-tag">Cábala</div>
+                </div>
+                <div class="topic-col">
+                    <div class="topic-tag">Numerología</div>
+                    <div class="topic-tag">Filosofía</div>
+                    <div class="topic-tag">Autoconocimiento</div>
+                    <div class="topic-tag">Matrix Mental</div>
+                </div>
+            </div>
+            <div class="topics-scroll-hint">
+                <span class="scroll-arrow">→ Desliza para ver más →</span>
             </div>
         </div>
     </section>
@@ -1625,24 +1906,33 @@
                 <h2>Esta colección puede ser para ti si…</h2>
             </div>
             <div class="for-list">
-                <div class="for-item">
-                    <p><strong>Disfrutas estudiar símbolos</strong> y sus diferentes interpretaciones en distintas culturas y tradiciones.</p>
+                <div class="for-col">
+                    <div class="for-item">
+                        <p><strong>Disfrutas estudiar símbolos</strong> y sus diferentes interpretaciones en distintas culturas y tradiciones.</p>
+                    </div>
+                    <div class="for-item">
+                        <p><strong>Te interesan las tradiciones antiguas</strong> y los sistemas filosóficos que han perdurado a través del tiempo.</p>
+                    </div>
                 </div>
-                <div class="for-item">
-                    <p><strong>Te interesan las tradiciones antiguas</strong> y los sistemas filosóficos que han perdurado a través del tiempo.</p>
+                <div class="for-col">
+                    <div class="for-item">
+                        <p><strong>Buscas nuevas perspectivas</strong> sobre la conciencia, la mente y la realidad.</p>
+                    </div>
+                    <div class="for-item">
+                        <p><strong>Prefieres materiales visuales</strong> que relacionen conceptos de forma clara y accesible.</p>
+                    </div>
                 </div>
-                <div class="for-item">
-                    <p><strong>Buscas nuevas perspectivas</strong> sobre la conciencia, la mente y la realidad.</p>
+                <div class="for-col">
+                    <div class="for-item">
+                        <p><strong>Quieres una colección de referencia</strong> que puedas consultar varias veces a través del tiempo.</p>
+                    </div>
+                    <div class="for-item">
+                        <p><strong>Disfrutas el aprendizaje independiente</strong> a tu ritmo, sin estructura rígida ni cronograma.</p>
+                    </div>
                 </div>
-                <div class="for-item">
-                    <p><strong>Prefieres materiales visuales</strong> que relacionen conceptos de forma clara y accesible.</p>
-                </div>
-                <div class="for-item">
-                    <p><strong>Quieres una colección de referencia</strong> que puedas consultar varias veces a través del tiempo.</p>
-                </div>
-                <div class="for-item">
-                    <p><strong>Disfrutas el aprendizaje independiente</strong> a tu ritmo, sin estructura rígida ni cronograma.</p>
-                </div>
+            </div>
+            <div class="for-scroll-hint">
+                <span class="scroll-arrow">→ Desliza para ver más →</span>
             </div>
         </div>
     </section>
@@ -1675,7 +1965,7 @@
                 </div>
                 <div class="offer-price">
                     <div class="price-original">US$35,97</div>
-                    <div class="price-final">US$15,99</div>
+                    <div class="price-final">US$9,99</div>
                     <p style="color: var(--text-secondary); margin: 1rem 0 0 0; font-size: 0.95rem;">Ahorra US$19,98 • Colección completa de 3 volúmenes</p>
                 </div>
                 <button class="btn btn-primary" style="width: 100%; font-size: 1.1rem;" onclick="redirectToHotmart()" aria-label="Ir a la compra en Hotmart">
@@ -1794,7 +2084,7 @@
             <div class="price-display" style="justify-content: center; margin-bottom: 2rem;">
                 <div class="price-original">US$35,97</div>
                 <div style="color: var(--text-secondary); font-size: 1rem;">→</div>
-                <div class="price-final">US$15,99</div>
+                <div class="price-final">US$9,99</div>
             </div>
             <button class="btn btn-primary" style="font-size: 1.1rem; padding: 1.25rem 3rem;" onclick="redirectToHotmart()" aria-label="Acceder a la compra en Hotmart">
                 Acceder ahora
@@ -1813,7 +2103,7 @@
                 <div class="footer-section">
                     <h4>Comunidad</h4>
                     <ul>
-                        <li><a href="https://instagram.com/_awakened_minds_x" target="_blank" rel="noopener noreferrer">Instagram @_awakened_minds_x</a></li>
+                        <li><a href="https://instagram.com/awakened_minds_x" target="_blank" rel="noopener noreferrer">Instagram @Awakened_Minds_X</a></li>
                         <li><a href="mailto:contacto@awakened.com">Contacto</a></li>
                     </ul>
                 </div>
@@ -1845,7 +2135,7 @@
     <div class="mobile-sticky-cta" id="mobileStickyCtA">
         <div class="container">
             <button class="btn btn-primary" style="width: 100%;" onclick="redirectToHotmart()">
-                OBTENER LOS 3 LIBROS · US$15,99
+                OBTENER LOS 3 LIBROS · US$9,99
             </button>
         </div>
     </div>
@@ -1882,7 +2172,7 @@
             // Registrar evento de conversión (para Google Analytics)
             if (window.gtag) {
                 gtag('event', 'begin_checkout', {
-                    'value': 15.99,
+                    'value': 9.99,
                     'currency': 'USD'
                 });
             }
@@ -2064,8 +2354,12 @@
             }
 
             const carousels = [
+                document.querySelector('.problem-points'),
                 document.querySelector('.volumes-grid'),
-                document.querySelector('.gallery-grid')
+                document.querySelector('.inside-grid'),
+                document.querySelector('.topics-grid'),
+                document.querySelector('.gallery-grid'),
+                document.querySelector('.for-list')
             ].filter(Boolean);
 
             const observer = new IntersectionObserver((entries) => {
