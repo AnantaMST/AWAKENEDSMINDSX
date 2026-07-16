@@ -520,6 +520,28 @@
             }
         }
 
+        /* ========== TOP THREE BOOKS IMAGE ========== */
+        .top-books-image {
+            width: 100%;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: center;
+            background-color: var(--bg-primary);
+        }
+
+        .top-books-image img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        @media (min-width: 768px) {
+            .top-books-image img {
+                max-width: 650px;
+            }
+        }
+
         /* ========== SOCIAL PROOF ========== */
         .social-proof {
             background-color: var(--bg-secondary);
@@ -620,26 +642,15 @@
         }
 
         .volumes-grid {
-            display: flex;
-            gap: 0.75rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
             margin-top: 3rem;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            scroll-snap-type: x mandatory;
-            padding: 1rem 0;
-            position: relative;
-            /* Hide scrollbar but keep scrollable */
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        .volumes-grid::-webkit-scrollbar {
-            display: none;
         }
 
         @media (min-width: 480px) {
             .volumes-grid {
-                gap: 1rem;
+                gap: 0.75rem;
             }
         }
 
@@ -656,20 +667,7 @@
         }
 
         .volumes-scroll-hint {
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            margin-top: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        @media (min-width: 769px) {
-            .volumes-scroll-hint {
-                display: none;
-            }
+            display: none;
         }
 
         .scroll-arrow {
@@ -687,33 +685,13 @@
             border-radius: 8px;
             overflow: hidden;
             transition: var(--transition);
-            min-width: 180px;
-            flex-shrink: 0;
-            scroll-snap-align: start;
+            width: 100%;
         }
 
         .volume-card:hover {
             border-color: var(--gold-primary);
             background: linear-gradient(135deg, rgba(18, 58, 99, 0.5), rgba(122, 32, 27, 0.3));
             transform: translateY(-10px);
-        }
-
-        @media (min-width: 480px) {
-            .volume-card {
-                min-width: 210px;
-            }
-        }
-
-        @media (min-width: 768px) {
-            .volume-card {
-                min-width: 250px;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .volume-card {
-                min-width: 300px;
-            }
         }
 
         .volume-image {
@@ -724,7 +702,6 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            min-height: 180px;
         }
 
         .volume-image img {
@@ -733,53 +710,57 @@
             object-fit: cover;
         }
 
-        @media (min-width: 480px) {
-            .volume-image {
-                min-height: 220px;
-            }
-        }
-
-        @media (min-width: 768px) {
-            .volume-image {
-                min-height: 300px;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .volume-image {
-                min-height: 380px;
-            }
-        }
-
         .volume-info {
-            padding: 1rem;
+            padding: 0.6rem;
         }
 
         .volume-roman {
             color: var(--gold-primary);
-            font-size: 0.75rem;
-            letter-spacing: 0.1em;
+            font-size: 0.55rem;
+            letter-spacing: 0.06em;
             text-transform: uppercase;
             font-weight: 600;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.25rem;
         }
 
         .volume-info h3 {
             color: var(--text-primary);
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
+            font-size: 0.85rem;
         }
 
         .volume-info p {
             color: var(--text-secondary);
-            font-size: 0.85rem;
-            line-height: 1.5;
+            font-size: 0.68rem;
+            line-height: 1.35;
             margin: 0;
+        }
+
+        @media (min-width: 480px) {
+            .volume-info {
+                padding: 0.85rem;
+            }
+
+            .volume-roman {
+                font-size: 0.65rem;
+            }
+
+            .volume-info h3 {
+                font-size: 1rem;
+            }
+
+            .volume-info p {
+                font-size: 0.75rem;
+            }
         }
 
         @media (min-width: 768px) {
             .volume-info {
                 padding: 1.5rem;
+            }
+
+            .volume-roman {
+                font-size: 0.75rem;
             }
 
             .volume-info h3 {
@@ -792,17 +773,23 @@
         }
 
         .volume-price {
-            margin-top: 0.75rem;
-            padding-top: 0.75rem;
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
             border-top: 1px solid rgba(214, 168, 75, 0.2);
             text-align: center;
         }
 
         .volume-price-amount {
-            font-size: 1.1rem;
+            font-size: 0.8rem;
             color: var(--gold-light);
             font-weight: 700;
             margin: 0;
+        }
+
+        @media (min-width: 480px) {
+            .volume-price-amount {
+                font-size: 0.95rem;
+            }
         }
 
         @media (min-width: 768px) {
@@ -931,26 +918,15 @@
         }
 
         .gallery-grid {
-            display: flex;
-            gap: 0.75rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
             margin-top: 2rem;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            scroll-snap-type: x mandatory;
-            padding: 1rem 0;
-            min-width: 0;
-            /* Hide scrollbar but keep scrollable */
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        .gallery-grid::-webkit-scrollbar {
-            display: none;
         }
 
         @media (min-width: 480px) {
             .gallery-grid {
-                gap: 1rem;
+                gap: 0.75rem;
             }
         }
 
@@ -967,29 +943,7 @@
         }
 
         .gallery-scroll-hint {
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            margin-top: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        @media (min-width: 769px) {
-            .gallery-scroll-hint {
-                display: none;
-            }
-        }
-
-        .gallery-scroll-arrow {
-            animation: slideArrow 1.5s ease-in-out infinite;
-        }
-
-        @keyframes slideArrow {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(5px); }
+            display: none;
         }
 
         .gallery-item {
@@ -1000,9 +954,7 @@
             cursor: pointer;
             transition: var(--transition);
             border: 1px solid rgba(214, 168, 75, 0.2);
-            min-width: 150px;
-            flex-shrink: 0;
-            scroll-snap-align: start;
+            width: 100%;
         }
 
         .gallery-item:hover {
@@ -1014,24 +966,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-
-        @media (min-width: 480px) {
-            .gallery-item {
-                min-width: 180px;
-            }
-        }
-
-        @media (min-width: 768px) {
-            .gallery-item {
-                min-width: 210px;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .gallery-item {
-                min-width: 250px;
-            }
         }
 
         /* ========== WHO IT'S FOR ========== */
@@ -1401,6 +1335,11 @@
             <span class="announcement-separator">•</span>
             <span class="announcement-countdown" id="countdownTimer">Oferta válida por: <strong id="timeLeft">--:--:--</strong></span>
         </div>
+    </div>
+
+    <!-- IMAGEN LOS 3 LIBROS -->
+    <div class="top-books-image">
+        <img src="https://i.imgur.com/jvsaGKC.png" alt="Los tres volúmenes de la Biblioteca de la Sabiduría" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%220B1020%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23D6A84B%22 font-size=%2724%27 font-family=%22Arial%22 font-weight=%22bold%22%3E[Los 3 Volúmenes]%3C/text%3E%3C/svg%3E'">
     </div>
 
     <!-- HEADER / NAVEGACIÓN -->
